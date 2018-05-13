@@ -1,9 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Stack Exchange
-  description: Stack Exchange is a network of 130+ Q&amp;A communities including Stack
-    Overflow.
+  title: Stack Exchange My Answers
+  description: "Returns the answers owned by the user associated with the given access_token.\n
+    \nThis method returns a list of answers."
   version: "2.0"
 host: api.stackexchange.com
 basePath: /2.2

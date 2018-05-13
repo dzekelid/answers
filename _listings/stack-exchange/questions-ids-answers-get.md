@@ -1,9 +1,17 @@
 ---
 swagger: "2.0"
 info:
-  title: Stack Exchange
-  description: Stack Exchange is a network of 130+ Q&amp;A communities including Stack
-    Overflow.
+  title: Stack Exchange Get Question Answers
+  description: "Gets the answers to a set of questions identified in id.\n \nThis
+    method is most useful if you have a set of interesting questions, and you wish
+    to obtain all of their answers at once or if you are polling for new or updates
+    answers (in conjunction with sort=activity).\n \n{ids} can contain up to 100 semicolon
+    delimited ids, to find ids programatically look for question_id on question objects.\n
+    \nThe sorts accepted by this method operate on the follow fields of the answer
+    object:\n - activity - last_activity_date\n - creation - creation_date\n - votes
+    - score\n  activity is the default sort.\n \n It is possible to create moderately
+    complex queries using sort, min, max, fromdate, and todate.\n \nThis method returns
+    a list of answers."
   version: "2.0"
 host: api.stackexchange.com
 basePath: /2.2

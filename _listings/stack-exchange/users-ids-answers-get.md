@@ -1,9 +1,14 @@
 ---
 swagger: "2.0"
 info:
-  title: Stack Exchange
-  description: Stack Exchange is a network of 130+ Q&amp;A communities including Stack
-    Overflow.
+  title: Stack Exchange Get User Answers
+  description: "Returns the answers the users in {ids} have posted.\n \n{ids} can
+    contain up to 100 semicolon delimited ids, to find ids programatically look for
+    user_id on user or shallow_user objects.\n \nThe sorts accepted by this method
+    operate on the follow fields of the answer object:\n - activity - last_activity_date\n
+    - creation - creation_date\n - votes - score\n  activity is the default sort.\n
+    \n It is possible to create moderately complex queries using sort, min, max, fromdate,
+    and todate.\n \nThis method returns a list of answers."
   version: "2.0"
 host: api.stackexchange.com
 basePath: /2.2

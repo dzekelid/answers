@@ -39,23 +39,26 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-id-tags-tags-top-answers-get.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-id-tags-tags-top-answers-get-postman.md
-- name: Stack Exchange Get User Answers
-  description: "Returns the answers the users in {ids} have posted.\n \n{ids} can
-    contain up to 100 semicolon delimited ids, to find ids programatically look for
-    user_id on user or shallow_user objects.\n \nThe sorts accepted by this method
-    operate on the follow fields of the answer object:\n - activity - last_activity_date\n
+- name: Stack Exchange Get User Questions No Answers
+  description: "Gets the questions asked by the users in {ids} which have no answers.\n
+    \nQuestions returns by this method actually have zero undeleted answers. It is
+    completely disjoint /users/{ids}/questions/unanswered and /users/{ids}/questions/unaccepted,
+    which only return questions with at least one answer, subject to other contraints.\n
+    \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+    look for user_id on user or shallow_user objects.\n \nThe sorts accepted by this
+    method operate on the follow fields of the question object:\n - activity - last_activity_date\n
     - creation - creation_date\n - votes - score\n  activity is the default sort.\n
     \n It is possible to create moderately complex queries using sort, min, max, fromdate,
-    and todate.\n \nThis method returns a list of answers."
+    and todate.\n \nThis method returns a list of questions."
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
   humanURL: https://stackexchange.com/
   baseURL: https://api.stackexchange.com//2.2
   tags: Answers
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-ids-answers-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-ids-questions-no-answers-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-ids-answers-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-ids-questions-no-answers-get-postman.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication

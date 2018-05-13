@@ -36,9 +36,9 @@ apis:
   tags: Answers
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/tags-tag-top-answerers-period-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-ids-answers-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/tags-tag-top-answerers-period-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-ids-answers-get-postman.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication

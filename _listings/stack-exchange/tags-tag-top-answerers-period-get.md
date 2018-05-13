@@ -1,9 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: Stack Exchange
-  description: Stack Exchange is a network of 130+ Q&amp;A communities including Stack
-    Overflow.
+  title: Stack Exchange Get Tags Top Answers
+  description: "Returns the top 30 answerers active in a single tag, of either all-time
+    or the last 30 days.\n \nThis is a view onto the data presented on the tag info
+    page on the sites.\n \nThis method returns a list of tag score objects."
   version: "2.0"
 host: api.stackexchange.com
 basePath: /2.2

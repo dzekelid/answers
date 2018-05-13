@@ -1,9 +1,17 @@
 ---
 swagger: "2.0"
 info:
-  title: Stack Exchange
-  description: Stack Exchange is a network of 130+ Q&amp;A communities including Stack
-    Overflow.
+  title: Stack Exchange Get User Questions No Answers
+  description: "Gets the questions asked by the users in {ids} which have no answers.\n
+    \nQuestions returns by this method actually have zero undeleted answers. It is
+    completely disjoint /users/{ids}/questions/unanswered and /users/{ids}/questions/unaccepted,
+    which only return questions with at least one answer, subject to other contraints.\n
+    \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+    look for user_id on user or shallow_user objects.\n \nThe sorts accepted by this
+    method operate on the follow fields of the question object:\n - activity - last_activity_date\n
+    - creation - creation_date\n - votes - score\n  activity is the default sort.\n
+    \n It is possible to create moderately complex queries using sort, min, max, fromdate,
+    and todate.\n \nThis method returns a list of questions."
   version: "2.0"
 host: api.stackexchange.com
 basePath: /2.2

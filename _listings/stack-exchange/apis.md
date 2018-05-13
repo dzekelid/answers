@@ -39,25 +39,25 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-id-tags-tags-top-answers-get.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-id-tags-tags-top-answers-get-postman.md
-- name: Stack Exchange Get Answer
-  description: "Gets the set of answers identified by ids.\n \nThis is meant for batch
-    fetcing of questions. A useful trick to poll for updates is to sort by activity,
-    with a minimum date of the last time you polled.\n \n{ids} can contain up to 100
-    semicolon delimited ids, to find ids programatically look for answer_id on answer
-    objects.\n \nThe sorts accepted by this method operate on the follow fields of
-    the answer object:\n - activity - last_activity_date\n - creation - creation_date\n
-    - votes - score\n  activity is the default sort.\n \n It is possible to create
-    moderately complex queries using sort, min, max, fromdate, and todate.\n \nThis
-    method returns a list of answers."
+- name: Stack Exchange Get Answer Comments
+  description: "Gets the comments on a set of answers.\n \nIf you know that you have
+    an answer id and need the comments, use this method. If you know you have a question
+    id, use /questions/{id}/comments. If you are unsure, use /posts/{id}/comments.\n
+    \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+    look for answer_id on answer objects.\n \nThe sorts accepted by this method operate
+    on the follow fields of the comment object:\n - creation - creation_date\n - votes
+    - score\n  creation is the default sort.\n \n It is possible to create moderately
+    complex queries using sort, min, max, fromdate, and todate.\n \nThis method returns
+    a list of comments."
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
   humanURL: https://stackexchange.com/
   baseURL: https://api.stackexchange.com//2.2
   tags: Answers
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-ids-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-ids-comments-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-ids-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-ids-comments-get-postman.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication

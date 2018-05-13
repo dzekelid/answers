@@ -39,26 +39,19 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-id-tags-tags-top-answers-get.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/users-id-tags-tags-top-answers-get-postman.md
-- name: Stack Exchange Get Question Answers
-  description: "Gets the answers to a set of questions identified in id.\n \nThis
-    method is most useful if you have a set of interesting questions, and you wish
-    to obtain all of their answers at once or if you are polling for new or updates
-    answers (in conjunction with sort=activity).\n \n{ids} can contain up to 100 semicolon
-    delimited ids, to find ids programatically look for question_id on question objects.\n
-    \nThe sorts accepted by this method operate on the follow fields of the answer
-    object:\n - activity - last_activity_date\n - creation - creation_date\n - votes
-    - score\n  activity is the default sort.\n \n It is possible to create moderately
-    complex queries using sort, min, max, fromdate, and todate.\n \nThis method returns
-    a list of answers."
+- name: Stack Exchange Get Tags Top Answers
+  description: "Returns the top 30 answerers active in a single tag, of either all-time
+    or the last 30 days.\n \nThis is a view onto the data presented on the tag info
+    page on the sites.\n \nThis method returns a list of tag score objects."
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
   humanURL: https://stackexchange.com/
   baseURL: https://api.stackexchange.com//2.2
   tags: Answers
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questions-ids-answers-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/tags-tag-top-answerers-period-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questions-ids-answers-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/tags-tag-top-answerers-period-get-postman.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication

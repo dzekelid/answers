@@ -11,18 +11,7 @@ created: "2018-08-25"
 modified: "2018-08-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/fixya/apis.md
 specificationVersion: "0.14"
-apis:
-- name: FixYa
-  x-api-slug: fixya
-  description: Product troubleshooting support, DIY advice, and help from experts
-    & local pros. Ask questions and get answers to fix, repair, and service any product.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1059-fixya.jpg
-  humanURL: http://www.fixya.com/
-  baseURL: https:///
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/fixya/openapi.md
+apis: []
 x-common:
 - type: x-blog
   url: http://blog.fixya.com

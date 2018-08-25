@@ -16,9 +16,9 @@ modified: "2018-08-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Quovo
-  x-api-slug: quovo
-  description: todo-add-description
+- name: Quovo API v3 - Answer MFA challenges
+  x-api-slug: connectionsconnection-idchallenges-put
+  description: Answer available MFA Challenges for a connection.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28293-quovo.jpg
   humanURL: http://quovo.com
   baseURL: https://example.com//
@@ -29,9 +29,9 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/connectionsconnection-idchallenges-put-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/connectionsconnection-idchallenges-put-openapi.md
-- name: Quovo
-  x-api-slug: quovo
-  description: todo-add-description
+- name: Quovo API v3 - Answer MFA challenges
+  x-api-slug: connectionsconnection-idchallenges-put
+  description: Answer available MFA Challenges for a connection.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28293-quovo.jpg
   humanURL: http://quovo.com
   baseURL: https://example.com//
@@ -42,23 +42,6 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/connectionsconnection-idchallenges-put-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/connectionsconnection-idchallenges-put-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/connectionsconnection-idchallenges-put-openapi.md
-- name: Quovo
-  x-api-slug: quovo
-  description: Quovo&rsquo;s API provides methods for retrieving data from financial
-    institutions on behalf of clients, advisors, and other users. This documentation
-    includes detailed explanations of API endpoints and common data definitions. Please
-    note that this documentation does not list all API endpoints. Additionally, you
-    may not have access to all of the listed endpoints depending on the services you&rsquo;ve
-    purchased from Quovo.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28293-quovo.jpg
-  humanURL: http://quovo.com
-  baseURL: https://example.com//
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/quovo/openapi.md
 x-common:
 - type: x-blog-rss
   url: https://www.quovo.com/fintech-blog/feed/

@@ -14,9 +14,14 @@ modified: "2018-08-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Answers
+  x-api-slug: answers-get
+  description: "Returns all the undeleted answers in the system.\n \nThe sorts accepted
+    by this method operate on the follow fields of the answer object:\n - activity
+    - last_activity_date\n - creation - creation_date\n - votes - score\n  activity
+    is the default sort.\n \n It is possible to create moderately complex queries
+    using sort, min, max, fromdate, and todate.\n \nThis method returns a list of
+    answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -28,9 +33,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Answer
+  x-api-slug: answersids-get
+  description: "Gets the set of answers identified by ids.\n \nThis is meant for batch
+    fetcing of questions. A useful trick to poll for updates is to sort by activity,
+    with a minimum date of the last time you polled.\n \n{ids} can contain up to 100
+    semicolon delimited ids, to find ids programatically look for answer_id on answer
+    objects.\n \nThe sorts accepted by this method operate on the follow fields of
+    the answer object:\n - activity - last_activity_date\n - creation - creation_date\n
+    - votes - score\n  activity is the default sort.\n \n It is possible to create
+    moderately complex queries using sort, min, max, fromdate, and todate.\n \nThis
+    method returns a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -38,17 +51,21 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Answer Comments
+  x-api-slug: answersidscomments-get
+  description: "Gets the comments on a set of answers.\n \nIf you know that you have
+    an answer id and need the comments, use this method. If you know you have a question
+    id, use /questions/{id}/comments. If you are unsure, use /posts/{id}/comments.\n
+    \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+    look for answer_id on answer objects.\n \nThe sorts accepted by this method operate
+    on the follow fields of the comment object:\n - creation - creation_date\n - votes
+    - score\n  creation is the default sort.\n \n It is possible to create moderately
+    complex queries using sort, min, max, fromdate, and todate.\n \nThis method returns
+    a list of comments."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -56,21 +73,14 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - My Answers
+  x-api-slug: meanswers-get
+  description: "Returns the answers owned by the user associated with the given access_token.\n
+    \nThis method returns a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -78,25 +88,22 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Question Answers
+  x-api-slug: questionsidsanswers-get
+  description: "Gets the answers to a set of questions identified in id.\n \nThis
+    method is most useful if you have a set of interesting questions, and you wish
+    to obtain all of their answers at once or if you are polling for new or updates
+    answers (in conjunction with sort=activity).\n \n{ids} can contain up to 100 semicolon
+    delimited ids, to find ids programatically look for question_id on question objects.\n
+    \nThe sorts accepted by this method operate on the follow fields of the answer
+    object:\n - activity - last_activity_date\n - creation - creation_date\n - votes
+    - score\n  activity is the default sort.\n \n It is possible to create moderately
+    complex queries using sort, min, max, fromdate, and todate.\n \nThis method returns
+    a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -104,29 +111,19 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get User Answers
+  x-api-slug: usersidsanswers-get
+  description: "Returns the answers the users in {ids} have posted.\n \n{ids} can
+    contain up to 100 semicolon delimited ids, to find ids programatically look for
+    user_id on user or shallow_user objects.\n \nThe sorts accepted by this method
+    operate on the follow fields of the answer object:\n - activity - last_activity_date\n
+    - creation - creation_date\n - votes - score\n  activity is the default sort.\n
+    \n It is possible to create moderately complex queries using sort, min, max, fromdate,
+    and todate.\n \nThis method returns a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -134,33 +131,22 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get User Questions No Answers
+  x-api-slug: usersidsquestionsnoanswers-get
+  description: "Gets the questions asked by the users in {ids} which have no answers.\n
+    \nQuestions returns by this method actually have zero undeleted answers. It is
+    completely disjoint /users/{ids}/questions/unanswered and /users/{ids}/questions/unaccepted,
+    which only return questions with at least one answer, subject to other contraints.\n
+    \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+    look for user_id on user or shallow_user objects.\n \nThe sorts accepted by this
+    method operate on the follow fields of the question object:\n - activity - last_activity_date\n
+    - creation - creation_date\n - votes - score\n  activity is the default sort.\n
+    \n It is possible to create moderately complex queries using sort, min, max, fromdate,
+    and todate.\n \nThis method returns a list of questions."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -168,37 +154,20 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get User Tags Top Answers
+  x-api-slug: usersidtagstagstopanswers-get
+  description: "Returns the top 30 answers a user has posted in response to questions
+    with the given tags.\n \n{id} can contain a single id, to find it programatically
+    look for user_id on user or shallow_user objects. {tags} is limited to 5 tags,
+    passing more will result in an error.\n \nThe sorts accepted by this method operate
+    on the follow fields of the answer object:\n - activity - last_activity_date\n
+    - creation - creation_date\n - votes - score\n  activity is the default sort.\n
+    \n It is possible to create moderately complex queries using sort, min, max, fromdate,
+    and todate.\n \nThis method returns a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -206,41 +175,15 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - My Tags Top Answers
+  x-api-slug: metagstagstopanswers-get
+  description: "Returns the top 30 answers the user associated with the given access_token
+    has posted in response to questions with the given tags.\n \nThis method returns
+    a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -248,45 +191,14 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - My Top Answer Tags
+  x-api-slug: metopanswertags-get
+  description: "Returns the user identified by access_token's top 30 tags by answer
+    score.\n \nThis method returns a list of top tag objects."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -294,49 +206,18 @@ apis:
     Streams, Plugins, Questions, General Data, Relative Data, Service API, Pedestal,
     Historical Data API, Relative StreamRank, Streams
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Answers
+  x-api-slug: answers-get
+  description: "Returns all the undeleted answers in the system.\n \nThe sorts accepted
+    by this method operate on the follow fields of the answer object:\n - activity
+    - last_activity_date\n - creation - creation_date\n - votes - score\n  activity
+    is the default sort.\n \n It is possible to create moderately complex queries
+    using sort, min, max, fromdate, and todate.\n \nThis method returns a list of
+    answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -348,47 +229,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Answer
+  x-api-slug: answersids-get
+  description: "Gets the set of answers identified by ids.\n \nThis is meant for batch
+    fetcing of questions. A useful trick to poll for updates is to sort by activity,
+    with a minimum date of the last time you polled.\n \n{ids} can contain up to 100
+    semicolon delimited ids, to find ids programatically look for answer_id on answer
+    objects.\n \nThe sorts accepted by this method operate on the follow fields of
+    the answer object:\n - activity - last_activity_date\n - creation - creation_date\n
+    - votes - score\n  activity is the default sort.\n \n It is possible to create
+    moderately complex queries using sort, min, max, fromdate, and todate.\n \nThis
+    method returns a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -397,52 +248,20 @@ apis:
     Historical Data API, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - Get Answer Comments
+  x-api-slug: answersidscomments-get
+  description: "Gets the comments on a set of answers.\n \nIf you know that you have
+    an answer id and need the comments, use this method. If you know you have a question
+    id, use /questions/{id}/comments. If you are unsure, use /posts/{id}/comments.\n
+    \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+    look for answer_id on answer objects.\n \nThe sorts accepted by this method operate
+    on the follow fields of the comment object:\n - creation - creation_date\n - votes
+    - score\n  creation is the default sort.\n \n It is possible to create moderately
+    complex queries using sort, min, max, fromdate, and todate.\n \nThis method returns
+    a list of comments."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -451,54 +270,14 @@ apis:
     Historical Data API, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - My Tags Top Answers
+  x-api-slug: metagstagstopanswers-get
+  description: "Returns the top 30 answers the user associated with the given access_token
+    has posted in response to questions with the given tags.\n \nThis method returns
+    a list of answers."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -507,56 +286,13 @@ apis:
     Historical Data API, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+- name: Stack Exchange - My Top Answer Tags
+  x-api-slug: metopanswertags-get
+  description: "Returns the user identified by access_token's top 30 tags by answer
+    score.\n \nThis method returns a list of top tag objects."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
   humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
@@ -565,68 +301,9 @@ apis:
     Historical Data API, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/meanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/questionsidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidsquestionsnoanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/usersidtagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-  - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answers-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersids-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/answersidscomments-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metagstagstopanswers-get-openapi.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/metopanswertags-get-openapi.md
-- name: Stack Exchange
-  x-api-slug: stack-exchange
-  description: After someone asks a question, members of the community propose answers.
-    Others vote on those answers. Very quickly, the answers with the most votes rise
-    to the top. You dont have to read through a lot of discussion to find the best
-    answer.    Like to...
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
-  humanURL: http://stackexchange.com
-  baseURL: https://api.stackexchange.com//2.2
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/stack-exchange/openapi.md
 x-common:
 - type: x-api-gallery
   url: http://square.api.gallery.streamdata.io

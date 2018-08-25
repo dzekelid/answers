@@ -13,45 +13,9 @@ modified: "2018-08-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/apis.md
 specificationVersion: "0.14"
 apis:
-- name: GoToAssist Remote Support
-  x-api-slug: gotoassist-remote-support
-  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
-    remote connectivity services for collaboration, IT management and customer engagement,
-    founded in 2003 and based in Boston, Massachusetts.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
-  humanURL: http://www.LogMeInInc.com
-  baseURL: https://api.getgo.com//G2A/rest/v1
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/openapi.md
-- name: GoToMeeting
-  x-api-slug: gotomeeting
-  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
-    remote connectivity services for collaboration, IT management and customer engagement,
-    founded in 2003 and based in Boston, Massachusetts.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
-  humanURL: http://www.LogMeInInc.com
-  baseURL: https://api.getgo.com//G2M/rest
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/openapi.md
-- name: GoToTraining
-  x-api-slug: gototraining
-  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
-    remote connectivity services for collaboration, IT management and customer engagement,
-    founded in 2003 and based in Boston, Massachusetts.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
-  humanURL: http://www.LogMeInInc.com
-  baseURL: https://api.getgo.com//G2T/rest
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/openapi.md
-- name: GoToWebinar
-  x-api-slug: gotowebinar
-  description: todo-add-description
+- name: GoToWebinar API - Get attendee survey answers
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
+  description: Get attendee survey answers.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
   humanURL: http://www.LogMeInInc.com
   baseURL: https://api.getgo.com//G2W/rest/organizers
@@ -62,35 +26,19 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
-- name: GoToWebinar
-  x-api-slug: gotowebinar
-  description: todo-add-description
+- name: GoToWebinar API - Get attendee poll answers
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
+  description: Get attendee poll answers.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
   humanURL: http://www.LogMeInInc.com
   baseURL: https://api.getgo.com//G2W/rest/organizers
   tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
     Data, Service API
   properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
-- name: GoToWebinar
-  x-api-slug: gotowebinar
-  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
-    remote connectivity services for collaboration, IT management and customer engagement,
-    founded in 2003 and based in Boston, Massachusetts.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
-  humanURL: http://www.LogMeInInc.com
-  baseURL: https://api.getgo.com//G2W/rest/organizers
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/logmein/openapi.md
 x-common:
 - type: x-github
   url: https://github.com/logmein

@@ -11,22 +11,7 @@ created: "2018-08-25"
 modified: "2018-08-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/answerhub/apis.md
 specificationVersion: "0.14"
-apis:
-- name: AnswerHub
-  x-api-slug: answerhub
-  description: AnswerHub is an enterprise-level Q&A service that helps teams collaborate
-    by eliminating the need to answer redundant questions. It is designed to be mobile-friendly
-    and highly customizable so that it can mesh seamlessly with the rest of a company&#039;s
-    website or application. AnswerHub comes with administrative tools for controlling
-    user access, managing content, and performing analytics. AnswerHub&#039;s functions
-    can be integrated with other software and systems by using its RESTful API.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/answerhub.png
-  humanURL: http://www.dzonesoftware.com/
-  baseURL: https:///
-  tags: Answers
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/answerhub/openapi.md
+apis: []
 x-common:
 - type: x-base
   url: http://answerhub.com/developer/api/#sthash.YHhVENWY.dpuf

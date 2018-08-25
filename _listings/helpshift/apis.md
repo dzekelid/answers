@@ -1,0 +1,60 @@
+---
+name: Helpshift
+x-slug: helpshift
+description: Deliver superior support with Helpshift, a customer service platform
+  designed to improve customer satisfaction, optimize service operations and maximize
+  ROI. Our AI-first, bot-powered support software will help you scale the customer
+  experience while m...
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1423-helpshift-sdk.jpg
+x-kinRank: "7"
+x-alexaRank: "21211"
+tags: Answers
+created: "2018-08-25"
+modified: "2018-08-25"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/helpshift/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Helpshift
+  x-api-slug: helpshift
+  description: Deliver superior support with Helpshift, a customer service platform
+    designed to improve customer satisfaction, optimize service operations and maximize
+    ROI. Our AI-first, bot-powered support software will help you scale the customer
+    experience while m...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1423-helpshift-sdk.jpg
+  humanURL: http://www.helpshift.com/
+  baseURL: https:///
+  tags: Answers
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/helpshift/openapi.md
+x-common:
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/helpshift-inc
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/helpshift-inc
+- type: x-developer
+  url: https://developers.helpshift.com/
+- type: x-email
+  url: support@helpshift.com
+- type: x-email
+  url: pr@helpshift.com
+- type: x-email
+  url: privacy@helpshift.com
+- type: x-email
+  url: success@helpshift.com
+- type: x-github
+  url: https://github.com/helpshift
+- type: x-pricing
+  url: https://www.helpshift.com/pricing/
+- type: x-twitter
+  url: https://twitter.com/helpshiftSDK
+- type: x-twitter
+  url: https://twitter.com/helpshift
+- type: x-website
+  url: http://www.helpshift.com/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com
+---

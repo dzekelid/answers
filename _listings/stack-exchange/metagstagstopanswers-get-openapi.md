@@ -1,10 +1,12 @@
 ---
 swagger: "2.0"
 x-collection-name: Stack Exchange
-x-complete: 1
+x-complete: 0
 info:
-  title: Stack Exchange
-  description: stack-exchange-is-a-network-of-130-qa-communities-including-stack-overflow-
+  title: Stack Exchange My Tags Top Answers
+  description: "Returns the top 30 answers the user associated with the given access_token
+    has posted in response to questions with the given tags.\n \nThis method returns
+    a list of answers."
   version: "2.0"
 host: api.stackexchange.com
 basePath: /2.2
@@ -543,4 +545,17 @@ paths:
       tags:
       - Tags
       - Anwers
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---

@@ -186,6 +186,371 @@ paths:
       tags:
       - Answers
       - comments
+  /me/answers:
+    get:
+      summary: My Answers
+      description: "Returns the answers owned by the user associated with the given
+        access_token.\n \nThis method returns a list of answers."
+      operationId: returns-the-answers-owned-by-the-user-associated-with-the-given-access-token-this-method-returns-a-l
+      x-api-path-slug: meanswers-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: fromdate
+        description: Unix date
+      - in: query
+        name: max
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: min
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: order
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      - in: query
+        name: sort
+      - in: query
+        name: todate
+        description: Unix date
+      responses:
+        200:
+          description: OK
+      tags:
+      - Answers
+  /questions/{ids}/answers:
+    get:
+      summary: Get Question Answers
+      description: "Gets the answers to a set of questions identified in id.\n \nThis
+        method is most useful if you have a set of interesting questions, and you
+        wish to obtain all of their answers at once or if you are polling for new
+        or updates answers (in conjunction with sort=activity).\n \n{ids} can contain
+        up to 100 semicolon delimited ids, to find ids programatically look for question_id
+        on question objects.\n \nThe sorts accepted by this method operate on the
+        follow fields of the answer object:\n - activity - last_activity_date\n -
+        creation - creation_date\n - votes - score\n  activity is the default sort.\n
+        \n It is possible to create moderately complex queries using sort, min, max,
+        fromdate, and todate.\n \nThis method returns a list of answers."
+      operationId: gets-the-answers-to-a-set-of-questions-identified-in-id-this-method-is-most-useful-if-you-have-a-set
+      x-api-path-slug: questionsidsanswers-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: fromdate
+        description: Unix date
+      - in: path
+        name: ids
+        description: Number list (semicolon delimited)
+      - in: query
+        name: max
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: min
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: order
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      - in: query
+        name: sort
+      - in: query
+        name: todate
+        description: Unix date
+      responses:
+        200:
+          description: OK
+      tags:
+      - Questions
+      - Answers
+  /users/{ids}/answers:
+    get:
+      summary: Get User Answers
+      description: "Returns the answers the users in {ids} have posted.\n \n{ids}
+        can contain up to 100 semicolon delimited ids, to find ids programatically
+        look for user_id on user or shallow_user objects.\n \nThe sorts accepted by
+        this method operate on the follow fields of the answer object:\n - activity
+        - last_activity_date\n - creation - creation_date\n - votes - score\n  activity
+        is the default sort.\n \n It is possible to create moderately complex queries
+        using sort, min, max, fromdate, and todate.\n \nThis method returns a list
+        of answers."
+      operationId: returns-the-answers-the-users-in-ids-have-posted-ids-can-contain-up-to-100-semicolon-delimited-ids-t
+      x-api-path-slug: usersidsanswers-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: fromdate
+        description: Unix date
+      - in: path
+        name: ids
+        description: Number list (semicolon delimited)
+      - in: query
+        name: max
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: min
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: order
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      - in: query
+        name: sort
+      - in: query
+        name: todate
+        description: Unix date
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Answers
+  /users/{ids}/questions/no-answers:
+    get:
+      summary: Get User Questions No Answers
+      description: "Gets the questions asked by the users in {ids} which have no answers.\n
+        \nQuestions returns by this method actually have zero undeleted answers. It
+        is completely disjoint /users/{ids}/questions/unanswered and /users/{ids}/questions/unaccepted,
+        which only return questions with at least one answer, subject to other contraints.\n
+        \n{ids} can contain up to 100 semicolon delimited ids, to find ids programatically
+        look for user_id on user or shallow_user objects.\n \nThe sorts accepted by
+        this method operate on the follow fields of the question object:\n - activity
+        - last_activity_date\n - creation - creation_date\n - votes - score\n  activity
+        is the default sort.\n \n It is possible to create moderately complex queries
+        using sort, min, max, fromdate, and todate.\n \nThis method returns a list
+        of questions."
+      operationId: gets-the-questions-asked-by-the-users-in-ids-which-have-no-answers-questions-returns-by-this-method-
+      x-api-path-slug: usersidsquestionsnoanswers-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: fromdate
+        description: Unix date
+      - in: path
+        name: ids
+        description: Number list (semicolon delimited)
+      - in: query
+        name: max
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: min
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: order
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      - in: query
+        name: sort
+      - in: query
+        name: todate
+        description: Unix date
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Answers
+  /users/{id}/tags/{tags}/top-answers:
+    get:
+      summary: Get User Tags Top Answers
+      description: "Returns the top 30 answers a user has posted in response to questions
+        with the given tags.\n \n{id} can contain a single id, to find it programatically
+        look for user_id on user or shallow_user objects. {tags} is limited to 5 tags,
+        passing more will result in an error.\n \nThe sorts accepted by this method
+        operate on the follow fields of the answer object:\n - activity - last_activity_date\n
+        - creation - creation_date\n - votes - score\n  activity is the default sort.\n
+        \n It is possible to create moderately complex queries using sort, min, max,
+        fromdate, and todate.\n \nThis method returns a list of answers."
+      operationId: returns-the-top-30-answers-a-user-has-posted-in-response-to-questions-with-the-given-tags-id-can-con
+      x-api-path-slug: usersidtagstagstopanswers-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: fromdate
+        description: Unix date
+      - in: path
+        name: id
+      - in: query
+        name: max
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: min
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: order
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      - in: query
+        name: sort
+      - in: path
+        name: tags
+        description: String list (semicolon delimited)
+      - in: query
+        name: todate
+        description: Unix date
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Tags
+      - Answers
+  /me/tags/{tags}/top-answers:
+    get:
+      summary: My Tags Top Answers
+      description: "Returns the top 30 answers the user associated with the given
+        access_token has posted in response to questions with the given tags.\n \nThis
+        method returns a list of answers."
+      operationId: returns-the-top-30-answers-the-user-associated-with-the-given-access-token-has-posted-in-response-to
+      x-api-path-slug: metagstagstopanswers-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: fromdate
+        description: Unix date
+      - in: query
+        name: max
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: min
+        description: sort = activity => datesort = creation => datesort = votes =>
+          number
+      - in: query
+        name: order
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      - in: query
+        name: sort
+      - in: path
+        name: tags
+        description: String list (semicolon delimited)
+      - in: query
+        name: todate
+        description: Unix date
+      responses:
+        200:
+          description: OK
+      tags:
+      - Tags
+      - Anwers
+  /me/top-answer-tags:
+    get:
+      summary: My Top Answer Tags
+      description: "Returns the user identified by access_token's top 30 tags by answer
+        score.\n \nThis method returns a list of top tag objects."
+      operationId: returns-the-user-identified-by-access-tokens-top-30-tags-by-answer-score-this-method-returns-a-list-
+      x-api-path-slug: metopanswertags-get
+      parameters:
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      - in: query
+        name: site
+        description: Each of these methods operates on a single site at a time, identified
+          by the site parameter
+      responses:
+        200:
+          description: OK
+      tags:
+      - Tags
+      - Anwers
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

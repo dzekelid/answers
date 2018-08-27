@@ -25,11 +25,24 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "8"
 x-alexaRank: "0"
 tags: Answers
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/aws-route-53/apis.md
 specificationVersion: "0.14"
-apis: []
+apis:
+- name: AWS Route 53 API - Test D N S Answer
+  x-api-slug: 20130401testdnsanswerampedns0clientsubnetipedns0clientsubnetipampedns0clientsubnetmaskedns0clientsubnetmaskhostedzoneidhostedzoneidamprecordnamerecordnameamprecordtyperecordtypeampresolveripresolverip-get
+  description: Gets the value that Amazon Route 53 returns in response to a DNS request
+    for a specified record name and type. You can optionally specify the IP address
+    of a DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Networking_AmazonRoute53.png
+  humanURL: https://aws.amazon.com/route53/
+  baseURL: :///
+  tags: Amazon Web Services, DNS, API Service Provider, API Service Provider, API
+    Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/aws-route-53/20130401testdnsanswerampedns0clientsubnetipedns0clientsubnetipampedns0clientsubnetmaskedns0clientsubnetmaskhostedzoneidhostedzoneidamprecordnamerecordnameamprecordtyperecordtypeampresolveripresolverip-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.rekognition.api.gallery.streamdata.io

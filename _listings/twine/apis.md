@@ -12,11 +12,51 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "7"
 x-alexaRank: "0"
 tags: Answers
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/twine/apis.md
 specificationVersion: "0.14"
-apis: []
+apis:
+- name: Twine - List health profile answers
+  x-api-slug: health-profile-answer-get
+  description: Get a list of health profile answers
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/twinehealth.png
+  humanURL: http://twinehealth.com
+  baseURL: https://api.twinehealth.com//pub
+  tags: Wearables, Healthcare, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/twine/health-profile-answer-get-openapi.md
+- name: Twine - Get a health profile answer
+  x-api-slug: health-profile-answerid-get
+  description: Get a health profile answer by id
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/twinehealth.png
+  humanURL: http://twinehealth.com
+  baseURL: https://api.twinehealth.com//pub
+  tags: Wearables, Healthcare, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/twine/health-profile-answerid-get-openapi.md
+- name: Twine - Get a health profile answer
+  x-api-slug: health-profile-answerid-get
+  description: Get a health profile answer by id
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/twinehealth.png
+  humanURL: http://twinehealth.com
+  baseURL: https://api.twinehealth.com//pub
+  tags: Wearables, Healthcare, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/twine/health-profile-answerid-get-openapi.md
+- name: Twine - Get a health profile answer
+  x-api-slug: health-profile-answerid-get
+  description: Get a health profile answer by id
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/twinehealth.png
+  humanURL: http://twinehealth.com
+  baseURL: https://api.twinehealth.com//pub
+  tags: Wearables, Healthcare, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/answers/master/_listings/twine/health-profile-answerid-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://twilio.api.gallery.streamdata.io
